@@ -1,0 +1,106 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toolbar-background {
+  background-color: #214d7c;
+}
+
+.toolbar-title,
+.bar-button-default,
+.bar-button-default:hover:not(.disable-hover) {
+  color: #ffffff;
+}
+
+.toolbar-title-md img.logo {
+  padding-right: 44px;
+}
+
+.header-title {
+  color: #214d7c;
+  font-size: 18px;
+  text-align: center;
+  background-color: #e7ebf5;
+  padding: 3px;
+}
+
+ion-menu .item {
+  color: #214d7c;
+}
+
+ion-app [padding-top] .scroll-content,
+ion-app [padding] .scroll-content {
+  padding-top: 30px !important;
+}
+
+.toast-success .toast-wrapper {
+  background: #4caf50 !important;
+}
+
+.toast-error .toast-wrapper {
+  background: #d80202 !important;
+}
+
+.toast-warning .toast-wrapper {
+  background: #f89406 !important;
+}
+
+ion-list.list-one .list-header {
+
+  border-top: 0px solid #fff !important;
+}
+
+.button {
+  height: 4.6rem;
+}
+
+.btn-default {
+  background: #e2e5ee;
+  color: #214d7c;
+  width: calc(100% - 20px);
+  margin-left: 9px;
+}
+
+.button:hover:not(.disable-hover) {
+  background-color: #214d7c;
+  color: #e2e5ee;
+}
+
+.badge {
+  color: #fff;
+  border-radius: 11px;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.primary {
+  color: #ffffff;
+  background: #214d7c;
+}
+
+.secondary{
+  color: #214d7c;
+  background: #e7ebf5;
+
+:focus, :active, :hover, :visited {
+    outline: none;
+    color: #ffffff;
+}
+
+}

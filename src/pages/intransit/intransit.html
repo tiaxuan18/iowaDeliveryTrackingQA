@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center><img class="logo" width="auto" height="40" src="assets/img/idph-logo.png" /></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-header class="header-title">In Transit</ion-header>
+  <div class="hidden-content" [class.hide]="!hasTransfer">
+    <div #map id="map"></div>
+    <div class="container">
+      <button class="primary mt-2" ion-button block (click)="logAStop()">
+        Log a Stop
+      </button>
+      <button class="secondary mt-2" ion-button block (click)="transferOwnership()">
+        Transfer Ownership
+      </button>
+      <button class="secondary mt-2" ion-button block (click)="delivered()">
+        Delivered
+      </button>
+    </div>
+    <div #directionsPanel class="directions-panel"></div>
+  </div>
+</ion-content>
+<ion-footer padding>
+  <button class="default" ion-button block (click)="googleMaps()">
+    Launch Google Maps
+  </button>
+</ion-footer>

@@ -1,0 +1,48 @@
+.page-login {
+
+  background-color: #214d7c;
+  color: #ffffff;
+  a {
+    color: #ffffff;
+  }
+
+  ion-item {
+    margin-top: 33px;
+  }
+  .button {
+    height: 6.6rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .item-block {
+    min-height: 5.4rem;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .label {
+    margin: -10px 8px 0px 0;
+  }
+  ion-img {
+    background: transparent;
+  }
+  .grid {
+    margin-top: 2rem;
+  }
+  .row {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .val-error {
+    background-color: #f90000;
+    color: #eeeeee;
+    padding: 3px;
+  }
+}

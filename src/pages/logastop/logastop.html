@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Log A Stop</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="page-logastop">
+  <form [formGroup]="logastopFrm">
+    <ion-item>
+      <ion-label>Stop Reason</ion-label>
+      <ion-select formControlName="reason">
+        <ion-option value="Gas">Gas</ion-option>
+        <ion-option value="Food">Food</ion-option>
+        <ion-option value="Traffic Incident">Traffic Incident</ion-option>
+        <ion-option value="Bathroom">Bathroom</ion-option>
+        <ion-option value="Other">Other</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Stop Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <div>
+      <button class="primary mt-2" ion-button block [disabled]="!logastopFrm.valid || stopBegan" (click)="beginStop()">
+        Begin Stop
+      </button>
+    </div>
+  </form>
+</ion-content>
+<ion-footer padding>
+  <button class="default" ion-button block (click)="resume()" [disabled]="!logastopFrm.valid && !stopBegan">
+    Resume
+  </button>
+</ion-footer>

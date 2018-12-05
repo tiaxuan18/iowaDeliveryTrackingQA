@@ -1,0 +1,7 @@
+{
+  "name": "iowaDeliveryTracking",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

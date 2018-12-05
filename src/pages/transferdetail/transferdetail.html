@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.Recipient_Company_Name__c}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="page-transfer-detail">
+  <ion-card>
+    <ion-card-header>
+      Address <span class="label-icon"><ion-icon name="navigate"></ion-icon></span>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- <ion-label floating>{{ item.name }}
+      </ion-label> -->
+      <ion-label floating>{{ item.receiving_Street_address__c }}</ion-label>
+      <ion-label floating>{{ item.receiving_City__c }}, {{ item.receiving_State__c }} {{ item.receiving_Zip_code__c }}</ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Items <span class="label-icon"><ion-icon name="cube"></ion-icon></span>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label floating>{{item.Product_Codes__c}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+  <!--button block ion-button class="btn-default" padding>
+   Cancel
+  </button -->
+</ion-content>
+<ion-footer padding>
+  <div>
+    <button block ion-button (click)="addToItinerary()">
+      <ion-icon name="add-circle"></ion-icon> &nbsp; Add To Itinerary
+    </button>
+  </div>
+</ion-footer>

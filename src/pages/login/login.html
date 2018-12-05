@@ -1,0 +1,49 @@
+<ion-content padding class="page-login text-center">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-auto>
+        <ion-img width="200" height="125" src="assets/img/idph-logo.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form [formGroup]="loginFrm" (ngSubmit)="onLogin(loginFrm.value)" padding>
+    <ion-label floating>Email</ion-label>
+    <ion-item>
+      <ion-input type="email" formControlName="username"></ion-input>
+    </ion-item>
+    <div no-lines *ngIf="loginFrm.get('username').hasError('required') && loginFrm.get('username').touched">
+        <div class="val-error" *ngIf="loginFrm.get('username').hasError('required')">
+          Please input your email
+        </div>
+    </div>
+    <div no-lines *ngIf="loginFrm.get('username').hasError('pattern') && loginFrm.get('username').touched">
+        <div class="val-error" *ngIf="loginFrm.get('username').hasError('pattern')">
+          Please a valid email
+        </div>
+    </div>
+    <ion-label floating>Password</ion-label>
+    <ion-item>
+      <ion-input type="password" formControlName="password" #password></ion-input>
+    </ion-item>
+    <div no-lines *ngIf="(loginFrm.get('password').hasError('required') && loginFrm.get('password').touched)">
+        <div class="val-error" *ngIf="loginFrm.get('password').hasError('required') && loginFrm.get('password').touched">
+          Please input your password
+        </div>
+    </div>
+    <div padding-top>
+      <button ion-button block [disabled]="loginFrm.invalid" type="submit">
+        Login
+      </button>
+    </div>
+  </form>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-auto>
+        <h3 ion-text color="light">
+          <a (click)="onForgotPassword()">Forget Password?</a>
+      </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

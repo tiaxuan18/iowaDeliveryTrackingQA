@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center><img class="logo" width="auto" height="40" src="assets/img/idph-logo.png" /></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="page-transfers" padding>
+  <ion-header class="header-title">Open Transfers</ion-header>
+  <ion-list class="list-one">
+    <ion-list-header>Deliveries</ion-list-header>
+    <ion-card *ngFor="let trans of data.transfers" (click)="itemTapped(trans)">
+      <ion-card-header>
+        {{trans.Recipient_Company_Name__c}} <span class="label-icon">  <ion-icon name="bus"></ion-icon>
+</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="card-line mb-1">
+          <span class="card-label">Transfer ID:</span> <span class="align-right">{{trans.Name}}</span>
+        </div>
+        <div class="card-line mb-1">
+          <span class="card-label">Driver: </span> <span class="align-right">{{trans.Driver_Name__c}}</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-label *ngIf="data.transfers.length == 0">
+      No Transfers Available
+    </ion-label>
+    <ion-list-header>Returns</ion-list-header>
+    <ion-card *ngFor="let ret of data.returns" (click)="itemTapped(ret)">
+      <ion-card-header>
+        {{ret.Recipient_Company_Name__c}} <span class="label-icon">  <ion-icon name="return-left"></ion-icon>
+</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="card-line mb-1">
+          <span class="card-label">Return ID:</span> <span class="align-right">{{ret.Name}}</span>
+        </div>
+        <div class="card-line mb-1">
+          <span class="card-label">Driver:</span> <span class="align-right">{{ret.Driver_Name__c}}</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  <ion-label *ngIf="data.returns.length == 0">
+    No Returns Available
+  </ion-label>  
+</ion-list>
+</ion-content>
+<ion-footer padding>
+  <div>
+    <button block ion-button (click)="goHome()">
+      Done
+    </button>
+  </div>
+</ion-footer>

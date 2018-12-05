@@ -1,0 +1,38 @@
+page-intransit {
+  .scroll {
+    height: 100%
+  }
+
+  #map {
+    min-height: 275px;
+    margin-top: 1rem;
+  }
+
+  ion-card {
+    max-height: 200px;
+    overflow: scroll;
+    position: absolute;
+    z-index: 1;
+  }
+  .hide {
+    display: none;
+  }
+  .directions-panel {
+    width: 90%;
+    margin-left: 2rem;
+    line-height: 3rem;
+  }
+
+  .adp-placemark {
+    background: #fff;
+    border: 0px solid silver;
+    color: #214d7c !important;
+    cursor: pointer;
+    margin: 20px 0px 23px 0px;
+    vertical-align: middle;
+
+    line-height: 20px;
+    font-weight: 500 !important;
+  }
+  .default {}
+}
