@@ -1,5 +1,5 @@
 {
-  "name": "Iowa Delivery Tracking",
+  "name": "Iowa Delivery Tracking QA",
   "baseref": "master",
   "tarignore": [
     ".sourcemaps",
